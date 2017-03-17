@@ -1,8 +1,24 @@
 <resources>
     <string name="app_name">Cost.In</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="slide_1_title">Cost.In</string>
+    <string name="slide_1_desc">Hi Anak Kost ! Kini telah hadir aplikasi terbaru yang membantu kamu mengolah sistem keuanganmu</string>
+
+    <string name="slide_2_title">Atur Saldomu</string>
+    <string name="slide_2_desc">Sekarang kamu bisa memasukkan pemasukan yang kamu punya sebagai saldo </string>
+
+    <string name="slide_3_title">Atur Pengeluaranmu</string>
+    <string name="slide_3_desc">Kamu juga bisa mengatur melist pengeluaranmu</string>
+
+    <string name="slide_4_title">Amankan Uangmu</string>
+    <string name="slide_4_desc">Bantulah pengeluaran dompetmu dengan aplikasi Cost.In</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
