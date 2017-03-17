@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/nav_transaksi"
+        android:icon="@drawable/transaksi"
+        android:title="Transaksi" />
 
     <item
-        android:id="@+id/nav_item_inbox"
-        android:icon="@drawable/inbox"
-        android:title="Inbox" />
+        android:id="@+id/nav_total"
+        android:icon="@drawable/total"
+        android:title="Total Uang" />
 
-    <item
-        android:id="@+id/nav_item_sent"
-        android:icon="@drawable/sent"
-        android:title="Sent" />
-
-    <item
-        android:id="@+id/nav_item_draft"
-        android:icon="@drawable/draft"
-        android:title="Drafts" />
+    <!--<item-->
+    <!--android:id="@+id/nav_item_draft"-->
+    <!--android:icon="@drawable/draft"-->
+    <!--android:title="Drafts" />-->
 
 
     <item android:title="Others">

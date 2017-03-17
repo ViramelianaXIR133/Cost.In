@@ -45,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
                 mDrawerLayout.closeDrawers();
 
 
-                if (menuItem.getItemId() == R.id.nav_item_sent) {
+                if (menuItem.getItemId() == R.id.nav_total) {
                     FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.containerView, new TotalFragment()).commit();
 
                 }
 
-                if (menuItem.getItemId() == R.id.nav_item_inbox) {
+                if (menuItem.getItemId() == R.id.nav_transaksi) {
                     FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
                     xfragmentTransaction.replace(R.id.containerView, new TabFragment()).commit();
                 }
