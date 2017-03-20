@@ -4,14 +4,16 @@
     android:layout_height="match_parent"
     tools:context="id.sch.smktelkom_mlg.project2.xirpl11517192933.costin.TotalFragment">
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/gambartotal"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="55dp"
         android:gravity="center"
-        android:text="layout jumlah uang"
+        android:text="Total Uang Anda : "
         android:textColor="@android:color/holo_red_light"
         android:textSize="30sp" />
 
@@ -26,6 +28,16 @@
         android:textColor="#000"
         android:textSize="15sp"
         android:textStyle="italic" />
+
+    <ImageView
+        android:id="@+id/gambartotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/total" />
 
 
 </RelativeLayout>

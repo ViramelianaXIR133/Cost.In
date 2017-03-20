@@ -3,12 +3,12 @@
 
     <item
         android:id="@+id/nav_transaksi"
-        android:icon="@drawable/transaksi"
+        android:icon="@drawable/ic_account_balance_wallet_black_24dp"
         android:title="Transaksi" />
 
     <item
         android:id="@+id/nav_total"
-        android:icon="@drawable/total"
+        android:icon="@drawable/ic_style_black_24dp"
         android:title="Total Uang" />
 
     <!--<item-->
@@ -20,11 +20,13 @@
     <item android:title="Others">
         <menu>
             <item
-                android:icon="@drawable/spam"
-                android:title="Spam" />
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_group_black_24dp"
+                android:title="About" />
             <item
-                android:icon="@drawable/bin"
-                android:title="Bin" />
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help_outline_black_24dp"
+                android:title="Help" />
         </menu>
     </item>
 
