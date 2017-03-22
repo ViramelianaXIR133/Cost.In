@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="jenis">
+        <item> Pilih satu kategori </item>
+        <item> Makanan dan minuman </item>
+        <item> Tagihan </item>
+        <item> Transportasi </item>
+        <item> Belanja </item>
+        <item> Kesehatan </item>
+        <item> Pendidikan </item>
+        <item> Pribadi </item>
+        <item> Lain-lain </item>
+    </string-array>
+</resources>
