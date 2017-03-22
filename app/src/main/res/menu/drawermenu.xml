@@ -30,15 +30,5 @@
         </menu>
     </item>
 
-    <group android:id="@+id/group_settings_id">
-
-        <item
-            android:icon="@drawable/settings"
-            android:title="Settings" />
-        <item
-            android:icon="@drawable/help"
-            android:title="Help" />
-    </group>
-
 
 </menu>

@@ -21,7 +21,7 @@ public class TabFragment extends Fragment {
 
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
-    public static int int_items = 3;
+    public static int int_items = 2;
 
     @Nullable
     @Override
@@ -68,11 +68,11 @@ public class TabFragment extends Fragment {
         @Override
         public Fragment getItem(int position) {
             switch (position) {
+//                case 0:
+//                    return new TransaksiFragment();
                 case 0:
-                    return new TransaksiFragment();
-                case 1:
                     return new UangFragment();
-                case 2:
+                case 1:
                     return new TambahFragment();
             }
             return null;
@@ -93,11 +93,11 @@ public class TabFragment extends Fragment {
         public CharSequence getPageTitle(int position) {
 
             switch (position) {
+//                case 0:
+//                    return "Jumlah Transaksi";
                 case 0:
-                    return "Jumlah Transaksi";
-                case 1:
                     return "Uang";
-                case 2:
+                case 1:
                     return "Tambah Transaksi";
             }
             return null;

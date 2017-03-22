@@ -15,10 +15,13 @@ public class MainActivity extends AppCompatActivity {
     FragmentManager mFragmentManager;
     FragmentTransaction mFragmentTransaction;
 
+    Database myDb;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        myDb = new Database(this);
 
         /**
          *Setup the DrawerLayout and NavigationView
