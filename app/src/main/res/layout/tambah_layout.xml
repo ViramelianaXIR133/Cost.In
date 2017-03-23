@@ -1,10 +1,16 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- ?xml version="1.0" encoding="utf-8"?> -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
     android:orientation="vertical"
     android:textAlignment="center"
-
     android:weightSum="1"
     tools:context="id.sch.smktelkom_mlg.project2.xirpl11517192933.costin.TambahFragment">
 
@@ -12,8 +18,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.19"
+        android:layout_height="120dp"
+        android:layout_weight="0.32"
         android:gravity="center"
         android:orientation="horizontal"
         android:weightSum="1">
@@ -23,20 +29,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:paddingTop="30dp"
+            android:layout_marginTop="30dp"
+            android:isScrollContainer="false"
             android:text="Rp."
             android:textAlignment="center"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="30sp" />
 
         <EditText
+            android:id="@+id/editTextRp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:layout_weight="0.49"
             android:inputType="numberSigned"
-            android:paddingTop="30dp"
+            android:isScrollContainer="false"
             android:textAlignment="center"
             android:textColor="@android:color/holo_green_dark"
+            android:textColorLink="@android:color/holo_orange_dark"
             android:textSize="26dp" />
 
     </LinearLayout>
@@ -45,10 +55,10 @@
         android:id="@+id/spinnerJenis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorButtonNormal"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/transparent"
         android:entries="@array/jenis"
-        android:paddingTop="50dp"
-        android:popupBackground="@color/dot_light_screen4" />
+        android:popupBackground="@color/dot_light_screen1" />
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
@@ -58,36 +68,35 @@
             android:id="@+id/editTextDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
             android:ems="10"
             android:hint="Catatan"
             android:inputType="text"
-            android:paddingTop="10dp" />
+            android:paddingTop="10dp"
+            android:textColorLink="@android:color/holo_green_dark" />
 
     </android.support.design.widget.TextInputLayout>
 
     <DatePicker
         android:id="@+id/datePicker"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
-
-    <EditText
-        android:id="@+id/editTexttgl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.19"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:layout_height="172dp"
+        android:layout_weight="0.36"
+        android:headerBackground="@android:color/holo_green_light"
+        tools:datePickerMode="calendar" />
 
     <Button
         android:id="@+id/buttonSimpan"
         style="@style/Base.TextAppearance.AppCompat.Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_weight="0.58"
         android:background="@drawable/bgbtn"
         android:text="Simpan"
         android:textAlignment="center"
         android:textColor="@android:color/white" />
-
-
 </LinearLayout>
+</ScrollView>

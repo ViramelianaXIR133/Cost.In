@@ -1,20 +1,13 @@
 package id.sch.smktelkom_mlg.project2.xirpl11517192933.costin;
 
 
-import android.app.DatePickerDialog;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import java.util.Calendar;
 
 
 /**
@@ -40,28 +33,45 @@ public class TambahFragment extends Fragment {
 
         spJenis = (Spinner) v.findViewById(R.id.spinnerJenis);
 
-        etTgl = (EditText) v.findViewById(R.id.editTexttgl);
-
-        etTgl.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.N)
-            @Override
-            public void onClick(View view) {
-                Calendar mcurrentDate = Calendar.getInstance();
-                mYear = mcurrentDate.get(Calendar.YEAR);
-                mMonth = mcurrentDate.get(Calendar.MONTH);
-                mDay = mcurrentDate.get(Calendar.DAY_OF_MONTH);
-
-                DatePickerDialog mDatePicker = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
-                    public void onDateSet(DatePicker datePicker, int selectedyear, int selectedmonth, int selectedday) {
-
-                    }
-                }, mYear, mMonth, mDay);
-                mDatePicker.setTitle("Select date");
-                mDatePicker.show();
-            }
-        });
+//        final Calendar myCalendar = Calendar.getInstance();
+//
+//        DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+//            @Override
+//            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+//                myCalendar.set(Calendar.YEAR, year);
+//                myCalendar.set(Calendar.MONTH, monthOfYear);
+//                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+//                updateLabel();
+//            }
+//        };
+//
+//        etTgl.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View view, boolean b) {
+//                new DatePickerDialog(TambahFragment.this, date, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+//            }
+//        });
+//        etTgl.setOnClickListener(new View.OnClickListener() {
+//            @RequiresApi(api = Build.VERSION_CODES.N)
+//            @Override
+//            public void onClick(View view) {
+//                Calendar mcurrentDate = Calendar.getInstance();
+//                mYear = mcurrentDate.get(Calendar.YEAR);
+//                mMonth = mcurrentDate.get(Calendar.MONTH);
+//                mDay = mcurrentDate.get(Calendar.DAY_OF_MONTH);
+//
+//                DatePickerDialog mDatePicker = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
+//                    public void onDateSet(DatePicker datePicker, int selectedyear, int selectedmonth, int selectedday) {
+//
+//                    }
+//                }, mYear, mMonth, mDay);
+//                mDatePicker.setTitle("Select date");
+//                mDatePicker.show();
+//            }
+//        });
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.tambah_layout, container, false);
     }
+
 }

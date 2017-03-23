@@ -5,7 +5,7 @@
     <color name="colorAccent">#ff4081</color>
 
     <color name="black">#000</color>
-    <color name="orange">#FA0</color>
+    <color name="orange">#ffc218</color>
     <color name="white">#FFF</color>
 
     <!-- Screens background color-->
@@ -21,8 +21,8 @@
     <color name="dot_dark_screen4">#a854d4</color>
 
     <!-- dots active colors -->
-    <color name="dot_light_screen1">#f98da5</color>
-    <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="dot_light_screen1">#fffcd3</color>
+    <color name="dot_light_screen2">#ebfffc</color>
     <color name="dot_light_screen3">#93c6fd</color>
     <color name="dot_light_screen4">#e4b5fc</color>
 
