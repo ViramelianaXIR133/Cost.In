@@ -14,13 +14,19 @@ public class MainActivity extends AppCompatActivity {
     NavigationView mNavigationView;
     FragmentManager mFragmentManager;
     FragmentTransaction mFragmentTransaction;
-
+    //RelativeLayout pager;
     Database myDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+// TotalFragment pageAdapter = new TotalFragment(getAc);
+//        pager = (ViewPager) findViewById(R.id.fragmenttotal);
+//        pager.setAdapter(pageAdapter);
+
+
         myDb = new Database(this);
 
         /**
@@ -59,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     xfragmentTransaction.replace(R.id.containerView, new TabFragment()).commit();
                 }
 
+
                 return false;
             }
 
@@ -75,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout.setDrawerListener(mDrawerToggle);
 
         mDrawerToggle.syncState();
+
 
     }
 }
