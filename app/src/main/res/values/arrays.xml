@@ -6,9 +6,11 @@
         <item> Tagihan </item>
         <item> Transportasi </item>
         <item> Belanja </item>
+        <item> Pulsa </item>
+        <item> Sewa kos </item>
+        <item> Laundry </item>
         <item> Kesehatan </item>
         <item> Pendidikan </item>
-        <item> Pribadi </item>
         <item> Lain-lain </item>
     </string-array>
 </resources>

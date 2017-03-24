@@ -1,11 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragmenttotal"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="5dp"
     tools:context="id.sch.smktelkom_mlg.project2.xirpl11517192933.costin.TotalFragment">
 
-
+    <RelativeLayout
+        android:id="@+id/fragmenttotal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -49,8 +53,17 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
         android:background="@drawable/bgbtn"
         android:text="Tambah Pemasukan"
         android:textAlignment="center"
         android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </RelativeLayout>
+
+
