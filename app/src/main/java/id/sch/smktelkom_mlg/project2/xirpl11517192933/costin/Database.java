@@ -16,7 +16,7 @@ public class Database extends SQLiteOpenHelper {
     public static final String COL2 = "jml_uang";
     public static final String COL3 = "kategori";
     public static final String COL4 = "keterangan";
-    public static final String COL5 = "tanggal";
+    //public static final String COL5 = "tanggal";
 
     public Database(Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -26,7 +26,7 @@ public class Database extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table " + TABLE_NAME + " (id_transaksi INTEGER PRIMARY KEY AUTOINCREMENT, jml_uang INTEGER, kategori TEXT, keterangan TEXT, tanggal DATE)");
+        db.execSQL("create table " + TABLE_NAME + " (id_transaksi INTEGER PRIMARY KEY AUTOINCREMENT, jml_uang INTEGER, kategori TEXT, keterangan TEXT)");
 
     }
 
@@ -51,13 +51,13 @@ public class Database extends SQLiteOpenHelper {
 //    }
 
 
-    public boolean insertData(String jml_uang, String kategori, String keterangan, int tanggal) {
+    public boolean insertData(String jml_uang, String kategori, String keterangan) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL2, jml_uang);
         contentValues.put(COL3, kategori);
         contentValues.put(COL4, keterangan);
-        contentValues.put(COL5, tanggal);
+        //contentValues.put(COL5, tanggal);
         long result = db.insert(TABLE_NAME, null, contentValues);
         return result != -1;
     }

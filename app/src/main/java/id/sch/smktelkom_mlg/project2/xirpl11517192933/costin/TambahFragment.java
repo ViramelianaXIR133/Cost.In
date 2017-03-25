@@ -20,16 +20,17 @@ import android.widget.Toast;
 public class TambahFragment extends Fragment {
 
     TextView etTgl;
-    int mYear;
-    int mMonth;
-    int mDay;
+//    int mYear;
+//    int mMonth;
+//    int mDay;
 
 
     Database myDb;
     EditText etRp, etDetail;
     Spinner spJenis;
-    DatePicker dtPicker;
+    DatePicker date;
     Button btnSimpan;
+//Date d;
 
     public TambahFragment() {
         // Required empty public constructor
@@ -47,7 +48,9 @@ public class TambahFragment extends Fragment {
         etDetail = (EditText) v.findViewById(R.id.editTextDetail);
         spJenis = (Spinner) v.findViewById(R.id.spinnerJenis);
         btnSimpan = (Button) v.findViewById(R.id.buttonSimpan);
-        dtPicker = (DatePicker) v.findViewById(R.id.datePicker);
+        date = (DatePicker) v.findViewById(R.id.datePicker);
+
+
         AddData();
 
 //        final Calendar myCalendar = Calendar.getInstance();
@@ -88,17 +91,49 @@ public class TambahFragment extends Fragment {
 //        });
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.tambah_layout, container, false);
+        //return inflater.inflate(R.layout.tambah_layout, container, false);
+        return v;
     }
+
+//        String datestring
+//        Calendar calendar = Calendar.getInstance();
+//        SimpleDateFormat formatter = new SimpleDateFormat("hh:mm");
+//        DateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyy");
+//        Date dDate = dateFormatter.parse(String )
+//        return dateFormatter.format(date);
+
+
+//    public  void onDateSet(DatePicker view,int year,int monthOfYear,int dayOfMonth){
+//       calendar.set (year,monthOfYear,dayOfMonth);
+//
+//        int years = year;   // Here you can get day,month and year.
+//        int month = monthOfYear;
+//        int day = dayOfMonth;
+//
+//        ContentValues values = new ContentValues();
+//
+//        values.put("Day",dayOfMonth);
+//        values.put("Month",monthOfYear);
+//        values.put("Year",year);
+//
+//    }
 
     private void AddData() {
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                Calendar calendar = Calendar.getInstance();
+//                int day = date.getDayOfMonth();
+//                int mounth = date.getMonth() + 1;
+//                int year = date.getYear();
+
+
+
+
+
                 boolean isInserted = myDb.insertData(etRp.getText().toString(),
                         spJenis.getSelectedItem().toString(),
-                        etDetail.getText().toString(),
-                        dtPicker.getDayOfMonth());
+                        etDetail.getText().toString());
                 if (isInserted == true)
                     Toast.makeText(getActivity(), "Data Inserted", Toast.LENGTH_LONG).show();
                 else
