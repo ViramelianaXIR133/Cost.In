@@ -1,5 +1,6 @@
 package id.sch.smktelkom_mlg.project2.xirpl11517192933.costin;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -19,7 +20,7 @@ public class Database extends SQLiteOpenHelper {
 
     public Database(Context context) {
         super(context, DATABASE_NAME, null, 1);
-        SQLiteDatabase db = this.getWritableDatabase();
+        //SQLiteDatabase db = this.getWritableDatabase();
 
     }
 
@@ -33,5 +34,31 @@ public class Database extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXIST " + TABLE_NAME);
         onCreate(db);
+    }
+
+//    public boolean insertData(int jml_uang, String kategori, String keterangan, String tanggal) {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        ContentValues contentValues = new ContentValues();
+//        contentValues.put(COL2,jml_uang);
+//        contentValues.put(COL3,kategori);
+//        contentValues.put(COL4,keterangan);
+//        contentValues.put(COL5,tanggal);
+//        long result = db.insert(TABLE_NAME,null,contentValues);
+//        if(result == -1)
+//            return false;
+//        else
+//            return true;
+//    }
+
+
+    public boolean insertData(String jml_uang, String kategori, String keterangan, int tanggal) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL2, jml_uang);
+        contentValues.put(COL3, kategori);
+        contentValues.put(COL4, keterangan);
+        contentValues.put(COL5, tanggal);
+        long result = db.insert(TABLE_NAME, null, contentValues);
+        return result != -1;
     }
 }
