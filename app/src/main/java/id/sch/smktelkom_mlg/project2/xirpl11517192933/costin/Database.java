@@ -2,6 +2,7 @@ package id.sch.smktelkom_mlg.project2.xirpl11517192933.costin;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
@@ -61,6 +62,12 @@ public class Database extends SQLiteOpenHelper {
         //contentValues.put(COL5, tanggal);
         long result = db.insert(TABLE_NAME, null, contentValues);
         return result != -1;
+    }
+
+    public Cursor getSomeData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select kategori,keterangan from " + TABLE_NAME, null);
+        return res;
     }
 
 //    public boolean insertData(int jml_uang, String kategori, String keterangan, String tanggal) {
