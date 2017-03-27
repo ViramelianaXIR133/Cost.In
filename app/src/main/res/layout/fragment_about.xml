@@ -1,14 +1,101 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="id.sch.smktelkom_mlg.project2.xirpl11517192933.costin.AboutFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@drawable/whitebg"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        tools:context="id.sch.smktelkom_mlg.project2.xirpl11517192933.costin.AboutFragment">
+
+        <ImageView
+            android:layout_width="127dp"
+            android:layout_height="124dp"
+            android:src="@drawable/b"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Developer"
+            style="@style/Base.TextAppearance.AppCompat.Headline"
+            android:layout_gravity="center_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:src="@drawable/karinn"
+                android:layout_weight="1"
+                android:id="@+id/karin" />
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:src="@drawable/junhaa"
+                android:layout_toRightOf="@+id/karin" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:src="@drawable/miftaa"
+                android:layout_weight="1"
+                android:id="@+id/mifta" />
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:src="@drawable/regii"
+                android:layout_toRightOf="@+id/mifta" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:src="@drawable/viraa"
+                android:layout_marginLeft="100dp"
+                />
+        </RelativeLayout>
+
+    <LinearLayout android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:context="id.sch.smktelkom_mlg.project2.xirpl11517192933.costin.AboutFragment">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Application"
+            style="@style/Base.TextAppearance.AppCompat.Headline"
+            android:layout_gravity="center_horizontal" />
 
-</FrameLayout>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Base.TextAppearance.AppCompat"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textAlignment="center"
+            android:text="Aplikasi CostIn adalah aplikasi yang dibuat untuk membantu user mengelola uang. Dengan fitur yang mudah di akses, akan membuat managemen keuangan user dilakukan dengan mudah dan menyenangkan."
+            />
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
