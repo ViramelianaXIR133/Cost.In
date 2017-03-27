@@ -1,6 +1,7 @@
 package id.sch.smktelkom_mlg.project2.xirpl11517192933.costin;
 
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -21,6 +22,8 @@ public class GajiFragment extends Fragment {
     Spinner spilih;
     Button bsimpan;
     Database myDb;
+    SQLiteDatabase SQLITEDATABASE;
+    String uang, kategori;
     public GajiFragment() {
         // Required empty public constructor
     }
@@ -38,10 +41,30 @@ public class GajiFragment extends Fragment {
         spilih = (Spinner) view.findViewById(R.id.spinnerPilih);
         bsimpan = (Button) view.findViewById(R.id.buttonSimpangaji);
 
+        bsimpan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                DBCreate();
+//                SubmitData2SQLiteDB();
+            }
+        });
+
         AddData();
 
 
         return view;
+    }
+
+//    private void SubmitData2SQLiteDB() {
+//        uang = ejumlah.getText().toString();
+//        kategori = spilih.getSelectedItem().toString();
+//
+//    }
+
+    private void DBCreate() {
+        //SQLITEDATABASE = SQLiteDatabase.openOrCreateDatabase("db_costin", null);
+        //SQLITEDATABASE.execSQL("CREATE TABLE IF NOT EXISTS demoTable()");
+
     }
 
     private void AddData() {

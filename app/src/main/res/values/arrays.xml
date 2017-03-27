@@ -13,4 +13,10 @@
         <item> Pendidikan </item>
         <item> Lain-lain </item>
     </string-array>
+    <string-array name="pilih">
+        <item>Pilih satu kategori</item>
+        <item>Gaji</item>
+        <item>Pemberian</item>
+        <item>Lain-lain</item>
+    </string-array>
 </resources>

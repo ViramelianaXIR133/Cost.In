@@ -70,6 +70,12 @@ public class Database extends SQLiteOpenHelper {
         return res;
     }
 
+    public Cursor getSomeTotalData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select kategori from " + TABLE_NAME_TOTAL, null);
+        return res;
+    }
+
 //    public boolean insertData(int jml_uang, String kategori, String keterangan, String tanggal) {
 //        SQLiteDatabase db = this.getWritableDatabase();
 //        ContentValues contentValues = new ContentValues();
