@@ -1,6 +1,7 @@
 package id.sch.smktelkom_mlg.project2.xirpl11517192933.costin;
 
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,6 +13,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static android.database.sqlite.SQLiteDatabase.openOrCreateDatabase;
 
 
 /**
@@ -30,6 +33,8 @@ public class TambahFragment extends Fragment {
     Spinner spJenis;
     DatePicker date;
     Button btnSimpan;
+    SQLiteDatabase SQLITEDATABASE;
+    String uang, catatan;
 //Date d;
 
     public TambahFragment() {
@@ -49,6 +54,14 @@ public class TambahFragment extends Fragment {
         spJenis = (Spinner) v.findViewById(R.id.spinnerJenis);
         btnSimpan = (Button) v.findViewById(R.id.buttonSimpan);
         date = (DatePicker) v.findViewById(R.id.datePicker);
+
+        btnSimpan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DBCreate();
+                SumbitData2SQLiteDB();
+            }
+        });
 
 
         AddData();
@@ -93,6 +106,20 @@ public class TambahFragment extends Fragment {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.tambah_layout, container, false);
         return v;
+    }
+
+    private void SumbitData2SQLiteDB() {
+        uang = etRp.getText().toString();
+
+        catatan = etDetail.getText().toString();
+
+    }
+
+    private void DBCreate() {
+
+        SQLITEDATABASE = openOrCreateDatabase("db_costin", null);
+
+        SQLITEDATABASE.execSQL("CREATE TABLE IF NOT EXISTS demoTable(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, name VARCHAR, phone_number VARCHAR, subject VARCHAR);");
     }
 
 //        String datestring
