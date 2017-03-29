@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:text="\n Bagaimana cara menggunakan Cost.In? \n\n
         Pilih kategori yang ingin kamu atur data keungannya, mulai dari makanan dan minuman hingga biaya pendidikan. Masukkan data keuangan kamu, disertai catatan dan tanggal kamu memasukkan data tersebut pada kolom yang telah disediakan di bagian Tambah Transaksi. Kemudian tekan Simpan.\n\n
-        Data keuangan kamu akan tampil di halaman Uang. Tekan salah satu untuk melihat detail. \n\n
+        Data keuangan kamu akan tampil di halaman Uang. \n\n
         Kamu bisa menambahkan total uang yang kamu miliki, dengan manambah pemasukan pada Menu Total Uang. Cukup swipe ke kiri Aplikasi Cost.In dan kamu bisa memilihnya di sana. Ingin tambah transaksi atau tambah pemasukan.
         \n\n\n SELAMAT MENGATUR BIAYA HIDUPMU!" />
     </ScrollView>
