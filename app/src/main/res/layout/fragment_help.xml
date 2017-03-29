@@ -1,9 +1,9 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/TextAppearance.AppCompat.Title"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.sch.smktelkom_mlg.project2.xirpl11517192933.costin.HelpFragment"
-    style="@style/TextAppearance.AppCompat.Title">
+    tools:context="id.sch.smktelkom_mlg.project2.xirpl11517192933.costin.HelpFragment">
 
     <!-- TODO: Update blank fragment layout -->
 <LinearLayout
@@ -12,25 +12,35 @@
     android:orientation="vertical">
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="165dp"
         android:layout_height="165dp"
-        android:id="@+id/imageView2"
         android:layout_gravity="center_horizontal|top"
-        android:src="@drawable/ic_card_travel_black_24dp"/>
+        android:src="@drawable/b" />
 
 
     <TextView
+        style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to Cost.In help center!"
-        android:textAlignment="center"
         android:layout_gravity="center"
-        style="@style/TextAppearance.AppCompat.Title" />
+        android:text="Welcome to Cost.In help center!"
+        android:textAlignment="center" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <TextView
+        style="@style/TextAppearance.AppCompat.Small"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""/>
+        android:text="\n Bagaimana cara menggunakan Cost.In? \n\n
+        Pilih kategori yang ingin kamu atur data keungannya, mulai dari makanan dan minuman hingga biaya pendidikan. Masukkan data keuangan kamu, disertai catatan dan tanggal kamu memasukkan data tersebut pada kolom yang telah disediakan di bagian Tambah Transaksi. Kemudian tekan Simpan.\n\n
+        Data keuangan kamu akan tampil di halaman Uang. Tekan salah satu untuk melihat detail. \n\n
+        Kamu bisa menambahkan total uang yang kamu miliki, dengan manambah pemasukan pada Menu Total Uang. Cukup swipe ke kiri Aplikasi Cost.In dan kamu bisa memilihnya di sana. Ingin tambah transaksi atau tambah pemasukan.
+        \n\n\n SELAMAT MENGATUR BIAYA HIDUPMU!" />
+    </ScrollView>
+
 </LinearLayout>
 
 </FrameLayout>
