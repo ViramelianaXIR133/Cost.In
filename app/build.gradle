@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'costinkey'
             keyPassword '123456'
-            storeFile file('./about/key.jks')
+            storeFile file('D:/about/key.jks')
             storePassword 'keycostin'
         }
     }
