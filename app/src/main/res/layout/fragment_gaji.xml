@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:textAlignment="center"
     android:weightSum="1"
-    tools:context="id.sch.smktelkom_mlg.project2.xirpl11517192933.costin.TambahFragment">
+    tools:context="id.sch.smktelkom_mlg.project2.xirpl11517192933.costin.GajiFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -46,10 +46,9 @@
         android:id="@+id/spinnerPilih"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorButtonNormal"
+        android:background="@android:color/transparent"
         android:entries="@array/pilih"
         android:paddingTop="50dp"
-
         android:popupBackground="@color/dot_light_screen4" />
 
 
@@ -61,8 +60,13 @@
         android:background="@drawable/bgbtn"
         android:text="Simpan Pemasukan"
         android:textAlignment="center"
-
         android:textColor="@android:color/white" />
+
+    <FrameLayout
+        android:id="@+id/content_gaji"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Pemasukan berhasil" />
 
 
 </LinearLayout>

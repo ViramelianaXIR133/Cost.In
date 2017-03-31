@@ -1,20 +1,28 @@
 package id.sch.smktelkom_mlg.project2.xirpl11517192933.costin;
 
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class TotalFragment extends Fragment implements View.OnClickListener {
-
+    EditText ejumlah;
+    Spinner spilih;
+    Button gajiBtn;
+    Database myDb;
+    SQLiteDatabase SQLITEDATABASE;
+    String uang, kategori;
     public TotalFragment() {
         // Required empty public constructor
     }
@@ -24,69 +32,48 @@ public class TotalFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_gaji, container, false);
+        myDb = new Database(getActivity());
 
-        View rootView = inflater.inflate(R.layout.total_layout, container, false);
+        ejumlah = (EditText) view.findViewById(R.id.editTextgaji);
+        spilih = (Spinner) view.findViewById(R.id.spinnerPilih);
 
-        Button totBtn = (Button) rootView.findViewById(R.id.buttonGaji);
+        gajiBtn = (Button) view.findViewById(R.id.buttonSimpangaji);
 
+        AddData();
+        return view;
+    }
 
-        totBtn.setOnClickListener(this);
-        return rootView;
-        // Inflate the layout for this fragment
-
-
-//        return v;
-        //return inflater.inflate(R.layout.total_layout, container, false);
-//return rootView();
+    @Override
+    public void onClick(View view) {
 
 
     }
-
-//    @Override
-//    public void onClick(View view) {
-//        if(!menuVisible)
+//    public void onBackPressed(){
+//        int fragments = getFragmentManager().getBackStackEntryCount();
+//        if (fragments == 1)
 //        {
-//            FragmentManager fm = getFragmentManager();
-//            FragmentTransaction ft = fm.beginTransaction();
-//            fm.beginTransaction();
-//            Fragment fragOne = new GajiFragment();
-//            ft.show(fragOne);
-//        }
-//        else
-//        {
-//            FragmentManager fm = getFragmentManager();
-//            FragmentTransaction ft = fm.beginTransaction();
 //
-//            fm.beginTransaction();
-//            // it's wrong , you just hide the fragment that not added to  FragmentTransaction
-//            Fragment fragOne = new GajiFragment();
-//            ft.hide(fragOne);
 //        }
 //    }
 
 
-    @Override
-    public void onClick(View view) {
-        Fragment fragment = null;
-        switch (view.getId()) {
-            case R.id.buttonGaji:
-                fragment = new GajiFragment();
-                replaceFragment(fragment);
-                View frag = getView().findViewById(R.id.fragmenttotal);
-                frag.setVisibility(View.GONE);
-                break;
+    private void AddData() {
+        gajiBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean inserttotal = myDb.insertTotal(ejumlah.getText().toString(),
+                        spilih.getSelectedItem().toString());
 
-        }
-    }
+                if (inserttotal == true)
 
+                    Toast.makeText(getActivity(), "Data Inserted", Toast.LENGTH_LONG).show();
 
-    public void replaceFragment(Fragment fragment) {
-
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.content_frame, fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
+                else
+                    Toast.makeText(getActivity(), "Data not Inserted", Toast.LENGTH_LONG).show();
 
 
+            }
+        });
     }
 }

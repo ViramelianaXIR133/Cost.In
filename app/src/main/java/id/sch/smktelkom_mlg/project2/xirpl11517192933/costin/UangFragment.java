@@ -38,7 +38,10 @@ public class UangFragment extends Fragment {
         LISTVIEW = (ListView) v.findViewById(R.id.listView1);
 
         SQLITEHELPER = new Database(getActivity());
-
+//        ArrayList <String> listtransaksi = new ArrayList<>();
+//        ArrayAdapter<String> adapter;
+//        adapter = ArrayAdapter.createFromResource(getActivity(), android.R.layout.simple_spinner_item, listtransaksi);
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // Inflate the layout for this fragment
         return v;

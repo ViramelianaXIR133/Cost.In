@@ -4,43 +4,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout android:orientation="vertical"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:background="@drawable/whitebg"
         android:layout_height="match_parent"
+        android:background="@drawable/whitebg"
+        android:orientation="vertical"
         android:weightSum="2"
         tools:context="id.sch.smktelkom_mlg.project2.xirpl11517192933.costin.AboutFragment">
 
         <ImageView
             android:layout_width="127dp"
             android:layout_height="124dp"
-            android:src="@drawable/b"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.14" />
+            android:layout_weight="0.14"
+            android:src="@drawable/b" />
 
         <TextView
+            style="@style/Base.TextAppearance.AppCompat.Headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="About Developer"
-            style="@style/Base.TextAppearance.AppCompat.Headline"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:text="About Developer" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/karin"
                 android:layout_width="180dp"
                 android:layout_height="200dp"
-                android:src="@drawable/karinn"
                 android:layout_weight="1"
-                android:id="@+id/karin" />
+                android:src="@drawable/karinn" />
 
             <ImageView
                 android:layout_width="180dp"
                 android:layout_height="200dp"
-                android:src="@drawable/junhaa"
-                android:layout_toRightOf="@+id/karin" />
+                android:layout_toRightOf="@+id/karin"
+                android:src="@drawable/junhaa" />
 
         </RelativeLayout>
 
@@ -49,17 +50,17 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/mifta"
                 android:layout_width="180dp"
                 android:layout_height="200dp"
-                android:src="@drawable/miftaa"
                 android:layout_weight="1"
-                android:id="@+id/mifta" />
+                android:src="@drawable/miftaa" />
 
             <ImageView
                 android:layout_width="180dp"
                 android:layout_height="200dp"
-                android:src="@drawable/regii"
-                android:layout_toRightOf="@+id/mifta" />
+                android:layout_toRightOf="@+id/mifta"
+                android:src="@drawable/regii" />
 
         </RelativeLayout>
         <RelativeLayout
@@ -69,32 +70,38 @@
             <ImageView
                 android:layout_width="180dp"
                 android:layout_height="200dp"
-                android:src="@drawable/viraa"
                 android:layout_marginLeft="100dp"
+                android:src="@drawable/viraa"
                 />
         </RelativeLayout>
 
-    <LinearLayout android:orientation="vertical"
-        android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
         android:layout_height="match_parent"
+            android:orientation="vertical"
         tools:context="id.sch.smktelkom_mlg.project2.xirpl11517192933.costin.AboutFragment">
 
         <TextView
+            style="@style/Base.TextAppearance.AppCompat.Headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="About Application"
-            style="@style/Base.TextAppearance.AppCompat.Headline"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:text="About Application" />
 
         <TextView
-            android:layout_marginTop="10dp"
+            style="@style/Base.TextAppearance.AppCompat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Base.TextAppearance.AppCompat"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Aplikasi CostIn adalah aplikasi yang dibuat untuk membantu user mengelola uang.
+            Dengan fitur yang mudah di akses, akan membuat managemen keuangan kamu dilakukan dengan mudah dan menyenangkan.
+            \n\nTujuan utama dalam pembuatan aplikasi adalah membantu para user dalam mengatur keuangan nya sehari-hari. Kamu dapat
+            menginputkan harga dan apa saja yang kamu beli, dapat, pengeluaran serta pemasukan dalam keseharian kamu dalam aplikasi ini.
+            \n\nSelain itu, ini sangat efisien dalam penggunaannya. Buka Help, untuk mengetahui informasi penggunaan lebih lanjut.
+            "
             android:textAlignment="center"
-            android:text="Aplikasi CostIn adalah aplikasi yang dibuat untuk membantu user mengelola uang. Dengan fitur yang mudah di akses, akan membuat managemen keuangan user dilakukan dengan mudah dan menyenangkan."
             />
     </LinearLayout>
     </LinearLayout>

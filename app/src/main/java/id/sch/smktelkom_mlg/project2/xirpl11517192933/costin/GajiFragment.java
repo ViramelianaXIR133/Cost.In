@@ -4,6 +4,7 @@ package id.sch.smktelkom_mlg.project2.xirpl11517192933.costin;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +21,7 @@ public class GajiFragment extends Fragment {
 
     EditText ejumlah;
     Spinner spilih;
-    Button bsimpan;
+    Button gajiBtn;
     Database myDb;
     SQLiteDatabase SQLITEDATABASE;
     String uang, kategori;
@@ -36,23 +37,15 @@ public class GajiFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_gaji, container, false);
         myDb = new Database(getActivity());
 
-
         ejumlah = (EditText) view.findViewById(R.id.editTextgaji);
         spilih = (Spinner) view.findViewById(R.id.spinnerPilih);
-        bsimpan = (Button) view.findViewById(R.id.buttonSimpangaji);
 
-        bsimpan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                DBCreate();
-//                SubmitData2SQLiteDB();
-            }
-        });
+        gajiBtn = (Button) view.findViewById(R.id.buttonSimpangaji);
 
         AddData();
-
-
         return view;
+
+
     }
 
 //    private void SubmitData2SQLiteDB() {
@@ -68,20 +61,31 @@ public class GajiFragment extends Fragment {
     }
 
     private void AddData() {
-        bsimpan.setOnClickListener(new View.OnClickListener() {
+        gajiBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 boolean inserttotal = myDb.insertTotal(ejumlah.getText().toString(),
                         spilih.getSelectedItem().toString());
 
                 if (inserttotal == true)
+
                     Toast.makeText(getActivity(), "Data Inserted", Toast.LENGTH_LONG).show();
+
                 else
                     Toast.makeText(getActivity(), "Data not Inserted", Toast.LENGTH_LONG).show();
+
+
             }
         });
     }
 
 
+    public void replaceFragment(Fragment fragment) {
+
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.content_gaji, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
 }
 

@@ -23,7 +23,10 @@
         android:layout_toEndOf="@id/imageView"
         android:layout_toRightOf="@id/imageView"
         android:maxLines="1"
+        android:text=""
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30sp"
         tools:text="Jenis Transaksi" />
 
     <TextView
@@ -36,6 +39,9 @@
         android:ellipsize="end"
         android:maxLines="2"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:textStyle="italic"
         tools:text="Catatan" />
 
 </RelativeLayout>

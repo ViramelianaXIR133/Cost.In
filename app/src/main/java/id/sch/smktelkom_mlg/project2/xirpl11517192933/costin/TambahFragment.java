@@ -157,7 +157,6 @@ public class TambahFragment extends Fragment {
 
 
 
-
                 boolean isInserted = myDb.insertData(etRp.getText().toString(),
                         spJenis.getSelectedItem().toString(),
                         etDetail.getText().toString());
