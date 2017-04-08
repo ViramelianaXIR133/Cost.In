@@ -5,10 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.provider.BaseColumns;
-
-import static id.sch.smktelkom_mlg.project2.xirpl11517192933.costin.Database.isitabel.TOT2;
-import static id.sch.smktelkom_mlg.project2.xirpl11517192933.costin.Database.isitabel.TOT3;
 
 
 /**
@@ -70,11 +66,11 @@ public class Database extends SQLiteOpenHelper {
         return res;
     }
 
-    public Cursor getSomeTotalData() {
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select kategori from " + TABLE_NAME_TOTAL, null);
-        return res;
-    }
+//    public Cursor getSomeTotalData() {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        Cursor res = db.rawQuery("select kategori from " + TABLE_NAME_TOTAL, null);
+//        return res;
+//    }
 
 //    public boolean insertData(int jml_uang, String kategori, String keterangan, String tanggal) {
 //        SQLiteDatabase db = this.getWritableDatabase();
@@ -90,22 +86,22 @@ public class Database extends SQLiteOpenHelper {
 //            return true;
 //    }
 
-    public boolean insertTotal(String jml_total, String kategoritotal) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(TOT2, jml_total);
-        contentValues.put(TOT3, kategoritotal);
-
-        long result = db.insert(isitabel.TABLE_NAME_TOTAL, null, contentValues);
-        return result != -1;
-    }
-
-    public static abstract class isitabel implements BaseColumns {
-        public static final String TOT1 = "id_total";
-        public static final String TOT2 = "jml_total";
-        public static final String TOT3 = "kategoritotal";
-        public static final String DATABASE_NAME = "db_costin";
-        public static final String TABLE_NAME_TOTAL = "tb_total";
-
-    }
+//    public boolean insertTotal(String jml_total, String kategoritotal) {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        ContentValues contentValues = new ContentValues();
+//        contentValues.put(TOT2, jml_total);
+//        contentValues.put(TOT3, kategoritotal);
+//
+//        long result = db.insert(isitabel.TABLE_NAME_TOTAL, null, contentValues);
+//        return result != -1;
+//    }
+//
+//    public static abstract class isitabel implements BaseColumns {
+//        public static final String TOT1 = "id_total";
+//        public static final String TOT2 = "jml_total";
+//        public static final String TOT3 = "kategoritotal";
+//        public static final String DATABASE_NAME = "db_costin";
+//        public static final String TABLE_NAME_TOTAL = "tb_total";
+//
+//    }
 }

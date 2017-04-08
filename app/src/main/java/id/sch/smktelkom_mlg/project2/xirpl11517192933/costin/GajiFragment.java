@@ -22,7 +22,7 @@ public class GajiFragment extends Fragment {
     EditText ejumlah;
     Spinner spilih;
     Button gajiBtn;
-    Database myDb;
+    Database2 myDb;
     SQLiteDatabase SQLITEDATABASE;
     String uang, kategori;
     public GajiFragment() {
@@ -35,7 +35,7 @@ public class GajiFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment}
         View view = inflater.inflate(R.layout.fragment_gaji, container, false);
-        myDb = new Database(getActivity());
+        myDb = new Database2(getActivity());
 
         ejumlah = (EditText) view.findViewById(R.id.editTextgaji);
         spilih = (Spinner) view.findViewById(R.id.spinnerPilih);

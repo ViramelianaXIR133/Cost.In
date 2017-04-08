@@ -21,7 +21,7 @@ public class TabFragment extends Fragment {
 
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
-    public static int int_items = 2;
+    public static int int_items = 3;
 
     @Nullable
     @Override
@@ -74,6 +74,8 @@ public class TabFragment extends Fragment {
                     return new UangFragment();
                 case 1:
                     return new TambahFragment();
+                case 2:
+                    return new MasukFragment();
             }
             return null;
         }
@@ -96,9 +98,11 @@ public class TabFragment extends Fragment {
 //                case 0:
 //                    return "Jumlah Transaksi";
                 case 0:
-                    return "Uang";
+                    return "Layout Pengeluaran";
                 case 1:
                     return "Tambah Transaksi";
+                case 2:
+                    return "Layout Pemasukan";
             }
             return null;
         }

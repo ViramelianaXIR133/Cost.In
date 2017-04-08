@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="?android:attr/selectableItemBackground"
     android:padding="16dp">
 
@@ -11,15 +11,16 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:scaleType="centerCrop"
-        tools:src="@drawable/ic_keluar_black_24dp" />
+        tools:src="@drawable/ic_swap_vert_black_24dp" />
 
     <TextView
-        android:id="@+id/textViewJenis"
+        android:id="@+id/textViewJmlRp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_toEndOf="@id/imageView"
         android:layout_toRightOf="@id/imageView"
         android:maxLines="1"
@@ -27,21 +28,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="30sp"
-        tools:text="Jenis Transaksi" />
+        tools:text="Jumlah Rupiah" />
 
-    <TextView
-        android:id="@+id/textViewCatatan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/textViewJenis"
-        android:layout_alignStart="@id/textViewJenis"
-        android:layout_below="@id/textViewJenis"
-        android:ellipsize="end"
-        android:maxLines="2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#000"
-        android:textSize="15sp"
-        android:textStyle="italic"
-        tools:text="Catatan" />
 
 </RelativeLayout>

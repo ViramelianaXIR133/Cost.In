@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,11 +17,13 @@ import java.util.ArrayList;
 public class SQLiteListAdapter extends BaseAdapter {
 
     Context context;
+    ImageView gambar;
     ArrayList<String> uang;
     ArrayList<String> catatan;
 
     public SQLiteListAdapter(
             Context context2,
+            ImageView gambar,
             ArrayList<String> uang,
             ArrayList<String> catatan
     )
@@ -28,6 +31,7 @@ public class SQLiteListAdapter extends BaseAdapter {
     {
 
         this.context = context2;
+        this.gambar = gambar;
         this.uang = uang;
         this.catatan = catatan;
     }
@@ -61,6 +65,7 @@ public class SQLiteListAdapter extends BaseAdapter {
 
             holder.textviewuanga = (TextView) child.findViewById(R.id.textViewJenis);
             holder.textviewcatatana = (TextView) child.findViewById(R.id.textViewCatatan);
+            holder.imageviewgambar = (ImageView) child.findViewById(R.id.imageView);
 
 
             child.setTag(holder);
@@ -71,6 +76,7 @@ public class SQLiteListAdapter extends BaseAdapter {
         }
         holder.textviewuanga.setText(uang.get(position));
         holder.textviewcatatana.setText(catatan.get(position));
+        //holder.imageviewgambar.setImageDrawable(getRe);
 
         return child;
     }
@@ -78,6 +84,7 @@ public class SQLiteListAdapter extends BaseAdapter {
     public class Holder {
         TextView textviewuanga;
         TextView textviewcatatana;
+        ImageView imageviewgambar;
     }
 
 }
