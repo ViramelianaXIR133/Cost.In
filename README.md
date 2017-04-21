@@ -38,9 +38,27 @@ Sedangkan untuk menu Total Uang Anda bisa melihat total uang sekaligus bisa mena
 Unduh Cost.In dan kelola dengan pintar keuangan Anda "Di Sini".
 
 <h2>Kontributor :</h2>
-Nama : A<br>
+Nama : Karina Widhia Nugrahini<br>
 Kelas : XI RPL 1 <br>
-Nomor : 123<br>
-NIS : 123456<br>
-Sekolah : SMK Telkom Malang<br>
-Akun : abcdefg<br> 
+Nomor : 15<br>
+Sekolah : SMK Telkom Malang<br><br>
+
+Nama : M Gerald Junha<br>
+Kelas : XI RPL 1 <br>
+Nomor : 17<br>
+Sekolah : SMK Telkom Malang<br><br>
+
+Nama : Miftakhul Rohmah<br>
+Kelas : XI RPL 1 <br>
+Nomor : 19<br>
+Sekolah : SMK Telkom Malang<br><br>
+
+Nama : Religi Nurhidayah Sakthi<br>
+Kelas : XI RPL 1 <br>
+Nomor : 29<br>
+Sekolah : SMK Telkom Malang<br><br>
+
+Nama : Vira Meliana Agustin<br>
+Kelas : XI RPL 1 <br>
+Nomor : 33<br>
+Sekolah : SMK Telkom Malang<br><br>
